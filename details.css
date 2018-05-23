@@ -1,0 +1,78 @@
+<style>
+				h3{
+					text-align:center;
+					color:white;
+					font-size:50px;
+					top:20px;
+				}
+				h1{
+					text-align:center;
+					color:white;
+					font-size:50px;
+					top:20px;
+				}
+				
+				b{
+					color:white;
+					font-size:25px;
+				}
+				
+				p{
+					color:white;
+					font-size:20px;
+				}
+				
+				div {
+					background-color: yellow;
+					padding: 20px;
+					display: none;
+					margine:50px;
+					float:right;
+					font-size:20px;
+				}
+				
+				#logo{
+					height:150px;
+					width:150px;
+					right:20px;
+					
+				}
+				
+				a:hover + div {
+					display: block;
+				}
+
+				td{
+					position: relative;
+					margin: 20px;
+					padding: 20px;
+					height:40px;
+				}
+				
+				img{
+					height:400px;
+					width:400px;
+				}
+				
+				#back{
+					height : 100px;
+					width :100px;
+					margin: 100px;
+					left: 100px;
+					float:right;
+				}
+				.header img {
+					float: left;
+					width: 100px;
+					height: 100px;
+					background: #555;
+					left:100px;
+					top:20px;
+				}
+
+				.header h3 {
+					position: relative;
+					top: 30px;
+					left: 10px;
+				}
+		</style>

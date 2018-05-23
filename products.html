@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" type = "text/css" href = "css&js/products.css">
+<script src="css&js/products.js"></script>
+<title>Choose your Product</title>
+
+</head>
+
+<body background = "images/prodBackground.jpg">
+<div id="mainContainer">
+<header id="top">
+
+<div class="logo">
+<img id="logo" src="images/weblogo.jpg"/>
+<div id="heading">
+GET YOUR SPORT ON!
+</div>
+</div>
+
+</header>
+
+<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="products.html">Store</a></li>
+  <li><a href="quiz.html">Quiz</a></li>
+  <li><a href="legends.html">Legends</a></li>
+  <li><a href="details.html">About Us</a></li>
+  <li><a href="cvLinks.html">Page Editors</a></li>
+</ul>
+
+           
+<div class="container">
+
+<!-- Product : TShirts -->
+<div class="product">
+<div class="image">
+	<img src="images/t-shirt.jpg" height="214"/>
+</div> 
+<div class="productName">
+	Sports T-Shirt
+</div>
+<div class="price">
+	<label id="priceTShirt">Select size for price</label>
+</div>
+<div class="selection">
+	Size<select name="sizeOptions" id="sizeOptions" onChange="tShirtSizeCalc();">
+
+<option value="pleaseSelect">Please Select</option>
+<option value="small">Small</option>
+<option value="medium">Medium</option>
+<option value="large">Large</option>
+
+</select>
+
+Quantity<select name="tShirtQuantity" id="tShirtQuantity" onChange="tShirtPriceCalc();">
+
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="5">5</option>
+<option value="10">10</option>
+
+</select>
+
+</div>
+<div class="btnAddCart">
+	<input class="addCart" type="button" onClick="addToCart1();">
+</div>
+</div>
+
+<hr/>
+
+<!-- Product : Bat -->
+<div class="product">
+<div class="image">
+	<img src="images/bats.jpg" height="214"/>
+</div> 
+<div class="productName">
+	Genuine Cricket Bat
+</div>
+<div class="price">
+	<label id="priceBat">$19.99</label>
+</div>
+
+<input type="text" id="orderBat" value="bat" hidden="true"><!--This was created to get the value for the iteration in the arrays-->
+
+<div class="selection">
+Quantity<select name="batQuantity" id="batQuantity" onChange="batPriceCalc();">
+
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="5">5</option>
+<option value="10">10</option>
+
+</select>
+</div>
+
+<div class="btnAddCart">
+	<input class="addCart" type="button" onClick="addToCart2();">
+</div>
+</div>
+
+<hr/>
+
+<!-- Product : Balls -->
+<div class="product">
+<div class="image">
+	<img src="images/ball.jpg" height="214"/>
+</div> 
+<div class="productName">
+	Leather Ball
+</div>
+<div class="price">
+	<label id="priceBalls">$6.99</label>
+</div>
+
+<input type="text" id="orderBall" value="ball" hidden="true"><!--This was created to get the value for the iteration in the arrays-->
+
+<div class="selection">
+	Quantity<select name="ballQuantity" id="ballQuantity" onChange="ballPriceCalc();">
+
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="5">5</option>
+<option value="10">10</option>
+
+</select>
+
+</div>
+<div class="btnAddCart">
+	<input class="addCart" type="button" onClick="addToCart3();">
+</div>
+</div>
+<hr/>
+
+<!-- Product : Shoes -->
+<div class="product">
+<div class="image">
+	<img src="images/shoes.jpg" height="214"/>
+</div> 
+<div class="productName">
+	Sports Shoes
+</div>
+<div class="price">
+	<label id="priceShoes">$24.99</label>
+</div>
+
+<input type="text" id="orderShoes" value="shoes" hidden="true"><!--This was created to get the value for the iteration in the arrays-->
+
+<div class="selection">
+Quantity<select name="shoesQuantity" id="shoesQuantity" onChange="shoesPriceCalc();">
+
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="5">5</option>
+<option value="10">10</option>
+
+</select>
+</div>
+
+<div class="btnAddCart">
+	<input class="addCart" type="button" onClick="addToCart4();">
+</div>
+</div>
+</div>
+
+
+<!-- Shopping Cart -->
+<div class="cart">
+<h1 id="cartHeading">Your Cart</h1>
+<hr color="#FFFC33"/>
+<form id="cartDetails">
+
+<div id="nameNOrder">
+Your Name: <input type="text" id="txtName"><br/><br/>
+Your Order(s):<br/><br/>
+</div>
+
+<div id="orders">
+</div>
+
+<div id="price">
+Your Price: <label id="finalPrice">$0</label><br/><br/>
+</div>
+
+<div id="noOfItems">
+No. of Items <br/><label id="totalItems">0</label>
+</div>
+
+<div id="buttonDiv">
+<input type="reset"  class="reset" onClick="resetCart(this.form)">
+<input type="button" class="checkout" value="Checkout" onClick="checkout(this.form);">
+</div>
+</form>
+</div>
+</div>
+
+<footer>
+<div class="footerDiv">
+
+<div id="pEditor">
+<a href="Web_quiz_details/cvshamal.html">Page Editor</a>
+</div>
+
+<div id="backToTop">
+<a href="#top">Back to Top</a>
+</div>
+
+</div>
+</footer>
+
+</body>
+</html>

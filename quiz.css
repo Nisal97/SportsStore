@@ -1,0 +1,103 @@
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #008;
+	}
+
+li {
+	float: left;
+	}
+
+li a {
+	font-family: "Agency FB";
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px 16px;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: none;
+	font-size: 30px;
+	color: #CCC;
+	}
+
+li a:hover {
+	background-color: #000;
+}
+
+		 h3{
+			font-size : 40px;
+			color : white;
+			text-align:center;
+			
+		 }
+		 h1{
+			 color :white;
+			 text-align: center;
+			 font-size : 50px;
+			
+		 }
+		 img{
+			width : 250;
+			height:200;
+			position: relative;
+		 }
+		 #logo{
+					height:150px;
+					width:150px;
+					right:20px;
+					
+				}
+		 #timer{
+			font-size : 30px;
+			background-color: yellow;
+		 }
+		 #texttohide{
+			font-size : 30px;
+			background-color: yellow;
+		 }
+		 #timeOut{
+			display:none;
+			color: red;
+			background-color: yellow;
+			font-size : 30px;
+		}
+		 p{
+			font-size : 20px;
+			color : white;
+		 }
+		 #myTable{
+			font-size : 20px;
+		 }
+		 b{
+			color:yellow;
+		 }
+		 #back{
+				height : 100px;
+				width :100px;
+				margin: 100px;
+				left: -100px;
+				float:right;
+		}
+		#myTable{
+			 color:#ffccff; 
+		}
+		.header img {
+			float: left;
+			width: 100px;
+			height: 100px;
+			background: #555;
+			left:100px;
+			top:20px;
+		}
+
+		.header h3 {
+			position: relative;
+			top: 30px;
+			left: 10px;
+		}
+		
+		 

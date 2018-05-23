@@ -1,0 +1,352 @@
+
+<html>
+	<head>
+		<title>Cricket Quiz</title>
+		<link rel= "StyleSheet" type = "text/css" href = "quiz.css">
+	</head>
+	<body  background = "b1.jpg" id ="id2" style=" background-image:transparent">
+	<!--Used to add a top button-->
+	<a id="top">
+
+		<div id = "Instructions">
+		<div class ="header">
+			<img id="logo" src = "logo.jpg">
+				
+				<h1> Welcome to the Quiz Page  </h1><br/><br/><br/><br/>
+<ul>
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="products.html">Store</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="legends.html">Legends</a></li>
+                <li><a href="details.html">About Us</a></li>
+ 		 <li><a href="cvLinks.html">Page Editors</a></li>
+            </ul>
+		</div>	
+			<br/><br/><br/><br/><br/><br><br/><br/><hr/>
+				<p><b> Instructions for the Quiz</b> <br/>
+				You will get 10 minites to complete the Quiz about Cricket. <br/>
+				You will get 2 Marks for the correct answer and 1 marks will be reduced for Wrong answer. <br/>
+				To get selected from the Quiz you have to score more than 10 Marks.<br/>
+				Good luck.
+				
+				</p>
+			<hr/>
+		</div>
+		<div id ="texttohide">Your Time Remaining : </div>
+		<div id="timeOut">Your Quiz time has expired. Refresh the page to try again.</div>
+		<div id="timer" align = "center" >30:00</div>
+		<br/>
+		<script type="text/JavaScript">
+		//getting the number of Questions in the Quiz
+		
+			var i = 1, numOfQuestion = 10;
+			//Creatung an Array for the questions
+			
+			questions = new Array() 
+			questions[1]="How many players playing the game for each side ?";
+			questions[2] ="What kind of a ball used in the game? ";
+			questions[3] =" How many umpires in the ground ?";
+			questions[4] =" When will the next World Cup Match ? ";
+			questions[5] =" cricket match is divided into periods called ________.";
+			questions[6] =" The total height of the wicket including bails is _______.";
+			questions[7] =" What is color of ball used in limited over match ? ";
+			questions[8] = " Game of cricket was invented in:";
+			questions[9] = " Cricket grew out of";
+			questions[10] = " Spread of the game cricket was confined to ";
+			//Creating an Array for the the radion button 1
+			answerA=new Array()
+			answerA[1]="10";
+			answerA[2]="Rubber";
+			answerA[3]="1";
+			answerA[4]="2018";
+			answerA[5]="Half";
+			answerA[6]="28.5 inches";
+			answerA[7]="White";
+			answerA[8]="England";
+			answerA[9]="Hockey";
+			answerA[10]="British colonies";
+			
+			//Creating an Array for the the radion button 2
+			answerB=new Array()
+			answerB[1]="11";
+			answerB[2]="Leather";
+			answerB[3]="3";
+			answerB[4]="2020";
+			answerB[5]="Intervals";
+			answerB[6]="29.5 inches";
+			answerB[7]="Orange";
+			answerB[8]="India";
+			answerB[9]="Volleyball";
+			answerB[10]="Australia and New Zealand";
+
+			//Creating an Array for the the radion button 3
+			answerC=new Array()
+			answerC[1]="15";
+			answerC[2]="Plastic";
+			answerC[3]="2";
+			answerC[4]="2019";
+			answerC[5]="Innings";
+			answerC[6]="25.5 inches";
+			answerC[7]="Red";
+			answerC[8]="Australia";
+			answerC[9]="Baseball";
+			answerC[10]="Africa and West Indies";
+
+			//Creating an Array for the the radion button 4
+			answerD=new Array()
+			answerD[1]="18";
+			answerD[2]="Baseball";
+			answerD[3]="5";
+			answerD[4]="2021";
+			answerD[5]="None of these";
+			answerC[6]="22.5 inches";
+			answerC[7]="Green";
+			answerC[8]="Pakisthan";
+			answerC[9]="Stick and Ball Games";
+			answerC[10]="Third World";
+
+			//Correct Answers for the Questions
+			rightAnswer=new Array()
+			rightAnswer[1]=2;
+			rightAnswer[2]=2;
+			rightAnswer[3]=3;
+			rightAnswer[4]=2;
+			rightAnswer[5]=3;
+			rightAnswer[6]=1;
+			rightAnswer[7]=3;
+			rightAnswer[8]=1;
+			rightAnswer[9]=4;
+			rightAnswer[10]=1;
+
+			var score = 0;
+			
+			
+			function preQuestion(){
+				var radios = document.getElementsByName("quiz");
+				var option;
+
+				for (var j = 0; j < radios.length; j++){       
+					if (radios[j].checked) {
+						option = radios[j].value;
+						radios[j].checked = false;
+						break;
+					}
+				}
+
+				//using this the user can go back for the questions
+				i--;
+				
+				if(i == 0){
+					alert("This is first Question. You can't go back.");
+					i++;
+				}
+				
+				var x=document.getElementById('myTable').rows
+					var y=x[0].cells
+					y[0].innerHTML=i + ".\t";
+					y[1].innerHTML=questions[i];
+					getOptionA();
+			}
+			function nextQuestion(){
+
+				var radios = document.getElementsByName("quiz");
+				var option;
+
+				for (var j = 0; j < radios.length; j++) {       
+					if (radios[j].checked){
+						option = radios[j].value;
+						radios[j].checked = false;
+						break;
+					}
+				}
+				
+				//Adding Scores for the user
+				
+				if(option==rightAnswer[i]){
+					score = score + 2;
+					
+				}else{
+					score = score - 1;
+				}
+				i++;
+				
+				if(i > numOfQuestion){
+					alert("This is the last Question. Press the Score Button view your final score.");
+					i--;
+				}	
+				var x=document.getElementById('myTable').rows
+					var y = x[0].cells
+					y[0].innerHTML = i + ".\t";
+					y[1].innerHTML = questions[i];
+					getOptionA();
+				}
+			function getOptionA(){
+					var x = document.getElementById('myTable').rows
+					var y = x[1].cells
+					y[1].innerHTML = answerA[i];
+					getOptionB();
+			}
+			function getOptionB(){
+					var x = document.getElementById('myTable').rows
+					var y = x [2].cells
+					y[1].innerHTML = answerB[i];
+					getOptionC();
+			}
+			function getOptionC(){
+					var x = document.getElementById('myTable').rows
+					var y = x[3].cells
+					y[1].innerHTML = answerC[i];
+					getOptionD();
+			}
+			function getOptionD(){
+					var x = document.getElementById('myTable').rows
+					var y = x[4].cells
+					y[1].innerHTML = answerD[i];
+					
+			}
+
+			function showScore() //score is updated only after clicking next or previous button not by clicking the answer and checking in order to know whether your answer is correct or not.
+			{
+			var radios = document.getElementsByName("quiz");
+			
+
+			for (var j = 0; j < radios.length; j++) {       
+						
+					   
+					radios[j].checked = false;
+					
+				}
+			 alert("Your score is "+ score);
+				if (score >= 10){
+												
+						document.body.style.backgroundImage = "url('green.jpg')";
+						alert("You Won");
+					}else{
+						document.body.style.backgroundImage = "url('red.jpg')";
+						alert("You lost. Try again by refreshing the page.");
+					}
+
+					document.getElementById("timer").innerHTML = "Game Over!";
+			}
+			
+			//create the timer to get the countdown
+			var timeoutHandle;
+			function countdown(minutes) {
+				var seconds = 60;
+				var mins = minutes
+				function time() {
+					var counter = document.getElementById("timer");
+					var current_minutes = mins-1
+					seconds--;
+					counter.innerHTML =
+					current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+					if( seconds > 0 ) {
+						timeoutHandle=setTimeout(time, 1000);
+					} else {
+
+						if(mins > 1){
+						   setTimeout(function () { countdown(mins - 1); }, 1000);
+
+						}
+					}
+				}
+				time();
+			}
+
+			countdown(10);
+			//Create this to notify the time of the quiz is over
+			var timePeriodInMs =600000;
+			setTimeout(function(){
+				 document.getElementById("texttohide").style.display = "none"; 
+				document.getElementById("timeOut").style.display = "block"; 
+			}, 
+			timePeriodInMs);
+			
+		</script>
+		
+
+<body id ="id2">
+	<!--Used a post method to get content from the resource(created table)-->
+	<form name=first method=post style="width:1500px; height:800px; color:blue  background-color:White;">
+	<fieldset style="background-color:black;">
+	<br/>
+		<legend align=center><h1><b> Cricket Quiz</b> </h1></legend>
+	<table id=myTable>
+	<tr>
+		<td >
+			<script type="text/JavaScript">
+				document.write(i+" .");
+			</script>
+			
+		</td>
+		<td>
+			<script type="text/JavaScript">
+				document.write(questions[i]);
+			</script>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<form>
+			<input type = "radio" value="1" name = "quiz"></td>
+		</form>
+		<td>
+			<script type="text/JavaScript">
+				document.write(answerA[i]);
+			</script>	
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<form>
+			<input type = "radio" value ="2" name = "quiz">
+		</form>
+		</td>
+		<td>
+			<script type="text/JavaScript">
+				document.write(answerB[i]);
+			</script>
+		</td>
+	</tr>
+	<tr>
+	
+		<td>
+		<form>
+			<input type = "radio" value ="3" name = "quiz"></td>
+		</form>
+		<td>
+			<script type="text/JavaScript">
+				document.write(answerC[i]);
+			</script>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<form>
+			<input type = "radio" value ="4" name = "quiz"></td>
+		</form>
+		<td>
+			<script type="text/JavaScript">
+				document.write(answerD[i]);
+			</script>
+		</td>
+	</tr>
+	</table>
+	<form>
+		
+		<input type = "button" value = "Previous Question" onClick = "preQuestion()">
+		<input type = "button" value = "Next Question" onClick = "nextQuestion()">
+		<input type = "button" value = "Show Score" onClick = "showScore()">
+		
+	</form>
+													
+	
+		</fieldset>
+	</form>
+	<a href="#top"><img id ="back" src  = "back.jpg"></a>
+	</body>
+</html>
+
+
+
+

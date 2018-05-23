@@ -1,0 +1,395 @@
+
+
+
+
+<!doctype HTML>
+<html>
+<head>
+<title>SRI LANKA CRICKET LEGENDS</title>
+
+<style>
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #008;
+	}
+
+li {
+	float: left;
+	}
+
+li a {
+	font-family: "Agency FB";
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px 16px;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: none;
+	font-size: 30px;
+	color: #CCC;
+	}
+
+li a:hover {
+	background-color: #000;
+}
+
+body{
+
+font-family: Arial, Helvetica, sans-serif;
+background-image:url("b1.jpg");
+}
+h1{
+font-family: Papyrus, fantasy;
+color: black;
+text-align: center;
+font-size: 40px;
+margin: 40px 20px 80px 20px;
+
+}
+.product{
+ float: left;
+ background-color:white;
+ margin: 1px 10px 0 0;
+ width :225px;
+ 
+}
+.description{
+text-align: center;
+ font-size: 20px;
+ font-weight: bold;
+color: #333;
+ padding-top: 20px;
+ height: 120px;
+position: relative;
+}
+
+.price{
+ color: rgb(204,51,255);
+ position: absolute; 
+ bottom:20px; 
+ width: 234px;
+
+}
+
+.container{
+ width:95%;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.labelOrder {
+margin: 50px 10px 0 0;
+padding-top: 12px;
+width: 258px;
+height: 460px;
+background-color: #ccc;
+float: left;
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+color: #333;
+}
+
+#order {
+height: 376px;
+float: none;
+margin-right: auto;
+margin-left:auto;
+}
+#orderDescription {
+font-size: 16px;
+height: 40px;
+}
+
+form{
+ width: 682px;
+ background-color: #ccc;
+ clear: both;
+ padding: 20px;
+ position: relative; 
+ top: 20px;
+}
+u{
+	color:white;
+	text-align: center;
+	font-size: 40px;
+	
+}
+
+
+input[type=button], input[type=reset] {
+float: right;
+margin-right: 10px;
+}
+#logo{
+	width:200px;
+	height:200px;
+}
+</style>
+</head>
+<body background = "b1.jpg">
+<div>
+<img id="logo" img src="Images/logo.jpg"
+<b><u>SRI LANKA CRICKET LEGENDS</u></b>
+</div>
+
+<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="products.html">Store</a></li>
+  <li><a href="quiz.html">Quiz</a></li>
+  <li><a href="legends.html">Legends</a></li>
+  <li><a href="details.html">About Us</a></li>
+  <li><a href="cvLinks.html">Page Editors</a></li>
+</ul>
+
+<div class="container">
+
+<div class="product" id="product1">
+<img id="104380.1" src="Images/104380.1.jpg" alt="104380.1.jpg">
+<div class="description">
+<label>Sanath Jayasuriya</label>
+<div class="info" id="info">Left Handed Batsman <br> 1989-2011</div>
+</div>
+</div>
+
+
+<div class="product" id="product2">
+<img id="49411.player" src="Images/49411.player.jpg" alt="4941.player.jpg">
+<div class="description">
+<label> Aravinda de Silva</label>
+<div class="info" id="info">Right Handed Batsman <br> 1984-2003</div>
+</div>
+</div>
+
+
+<div class="product" id="product3">
+<img id="128431.1" src="images/128431.1.jpg" alt="128431.1.jpg">
+<div class="description">
+<label>Muttiah Muralitharan</label>
+<div class="info" id="info">Right Arm Bowler
+ <br> 1992-2011
+</div>
+</div>
+</div>
+
+<div class="product" id="product4">
+<img id="203231.1" src="Images/203231.1.jpg" alt="203231.1.jpg">
+<div class="description">
+<label>Kumar Sangakkara</label>
+<div class="info" id="info">Left Handed Batsman <br> 2000-2015</div>
+</div>
+</div>
+
+<div class="product" id="product5">
+<img id="203219.1" src="Images/203219.1.jpg" alt="203219.1.jpg">
+<div class="description">
+<label>Mahela Jayawardene</label>
+<div class="info" id="info">Right Handed Batsman <br> 1997-2015</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="labelOrder">Description:
+<div id="orderDescription"> </div>
+<div class="product" id="order"></div>
+</div>
+
+
+
+
+
+<form>
+
+
+<select name="bOptions" id="bouquetOptions">
+
+
+
+
+</select>
+
+
+
+<input type="radio" name="des" id="white1" value="white">
+<label for="sanath">Sanath</label>
+<input type="radio" name="des" id="pink1" value="pink">
+<label for="aravinda">Aravinda</label>
+<input type="radio" name="des" id="red1" value="red">
+<label for="Muttiah">Muttiah</label>
+<input type="radio" name="des" id="red1" value="red">
+<label for="Kumar">Kumar</label>
+<input type="radio" name="des" id="red1" value="red">
+<label for="Mahela">Mahela</label>
+
+
+
+
+<input type="reset" value="Reset" onClick="resetOrder()">
+
+
+</form>
+</div>
+
+<script>
+
+
+
+
+function getSelectedValue( selectList ){
+
+ return selectList[ selectList.selectedIndex ].value;
+
+ }
+
+
+function getSelectedText( selectList ){
+
+ return selectList.options[ selectList.selectedIndex ].text;
+
+}
+
+function checkOptions(formRef){
+
+
+
+
+
+	if(x==="extra"){
+ 
+  document.getElementById("sanath").src = "images/104380,1.jpeg";
+  document.getElementById("aravinda").src = "images/pink.jpeg";
+  document.getElementById("red").src = "images/red.jpeg";
+  
+  
+ }
+
+
+ 
+ 
+
+
+	var radios = document.getElementsByName('color');
+	var chosenBouquet;
+            
+	for(var i = 0; i < radios.length; i++){
+		if(radios[i].checked){
+			chosenBouquet = radios[i].value;
+                   
+		}         
+	}
+
+	
+	 displayBouquet(chosenBouquet);
+	
+}
+
+function displayBouquet(bouquet){
+	
+	switch(bouquet){
+	
+	    case "white":
+		document.getElementById("order").innerHTML =document.getElementById("product1").innerHTML;
+		  totalPrices=document.getElementById("whitePrice").innerHTML;  
+        break;
+	    case "red":
+		document.getElementById("order").innerHTML =document.getElementById("product3").innerHTML;
+		 totalPrices=document.getElementById("redPrice").innerHTML; 
+		break;
+
+	
+		case "pink":
+		document.getElementById("order").innerHTML =document.getElementById("product2").innerHTML;
+		 totalPrices=document.getElementById("pinkPrice").innerHTML; 
+		break;
+		
+		default:
+		document.getElementById("order").innerHTML ="";
+	
+	}
+
+}
+ function resetOrder () {
+ 
+ 
+  document.getElementById("white").src = "images/white.jpeg";
+  document.getElementById("pink").src = "images/pink.jpeg";
+  document.getElementById("red").src = "images/red.jpeg";
+ 
+ 
+  document.getElementById("order").innerHTML=""; 
+ 
+ 
+ }
+ 
+
+	
+	
+document.getElementById("white1").addEventListener("click",function(){
+   displayBouquet(this.value);
+});
+
+document.getElementById("pink1").addEventListener("click",function(){
+   displayBouquet(this.value);
+});
+
+document.getElementById("red1").addEventListener("click",function(){
+   displayBouquet(this.value);
+});
+
+
+	
+
+document.getElementById("bouquetOptions").addEventListener("change",function(){checkOptions(this.form);});
+
+document.getElementById("product1").addEventListener("click",function(){
+displayBouquet("white"); //Load correct image
+document.getElementById("white1").checked=true; //check the corresponding radio button
+});
+
+document.getElementById("product2").addEventListener("click",function(){
+displayBouquet("pink"); //Load correct image
+document.getElementById("pink1").checked=true; //check the corresponding radio button
+});
+
+document.getElementById("product3").addEventListener("click",function(){
+displayBouquet("red"); //Load correct image
+document.getElementById("red1").checked=true; //check the corresponding radio button
+});
+
+
+document.getElementById("product4").addEventListener("click",function(){
+document.getElementById("order").innerHTML=document.getElementById("product4").innerHTML;
+//displayBouquet("red1"); //Load correct image
+//document.getElementById("red1").checked=true; //check the corresponding radio button
+});
+
+
+
+document.getElementById("product5").addEventListener("click",function(){
+document.getElementById("order").innerHTML=document.getElementById("product5").innerHTML;
+//displayBouquet("red2"); //Load correct image
+//document.getElementById("red1").checked=true; //check the corresponding radio button
+});
+
+
+
+document.getElementById("btnorder").addEventListener("click",function(){
+alert(totalPrices);});
+
+
+</script>
+</body>
+</html>
